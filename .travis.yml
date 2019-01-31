@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - openjdk7
+script:
+  - mvn --settings src/travis/settings.xml clean package site
+branches:
+  only:
+  - jbake

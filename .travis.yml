@@ -1,7 +1,8 @@
+dist: xenial
 language: java
 
 jdk:
-  - openjdk7
+  - openjdk10
 
 script:
   - mvn --settings src/travis/settings.xml clean package site

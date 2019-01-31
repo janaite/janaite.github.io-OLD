@@ -6,13 +6,13 @@
     <atom:link href="http://www.janaite.net/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Thu, 31 Jan 2019 13:28:47 +0000</pubDate>
-    <lastBuildDate>Thu, 31 Jan 2019 13:28:47 +0000</lastBuildDate>
+    <pubDate>Thu, 31 Jan 2019 13:34:32 +0000</pubDate>
+    <lastBuildDate>Thu, 31 Jan 2019 13:34:32 +0000</lastBuildDate>
 
     <item>
       <title>Rendering engine missing</title>
       <link>http://www.janaite.net/blog/2013/second-post.html</link>
-      <pubDate>Thu, 31 Jan 2019 13:28:47 +0000</pubDate>
+      <pubDate>Thu, 31 Jan 2019 13:34:31 +0000</pubDate>
       <guid isPermaLink="false">blog/2013/second-post.html</guid>
       	<description>
 	The markup engine [org.jbake.parser.MarkdownEngine] for [/home/travis/build/janaite/janaite.github.io/src/main/jbake/content/blog/2013/second-post.md] couldn&apos;t be loaded

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>website</artifactId>
+    <groupId>io.github.janaite</groupId>
+    <version>1.0.0</version>
+    
+    <!--    <dependencies>
+        <dependency>
+            <groupId>org.jbake</groupId>
+            <artifactId>jbake-core</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj</artifactId>
+            <version>1.5.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jbake</groupId>
+            <artifactId>jbake-maven-plugin</artifactId>
+            <version>0.3.1</version>
+        </dependency>
+    </dependencies>-->
+    <scm>
+        <url>https://github.com/janaite/janaite.github.io</url>
+        <connection>scm:git:git://github.com/janaite/janaite.github.io.git</connection>
+        <!-- <developerConnection>scm:git:git@github.com:janaite/janaite.github.io.git</developerConnection> -->
+        <developerConnection>scm:git:https://github.com/janaite/janaite.github.io.git</developerConnection>
+    </scm>
+
+    <properties>
+        <github.global.server>github</github.global.server>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.jbake</groupId>
+                <artifactId>jbake-maven-plugin</artifactId>
+                <version>0.3.1</version>
+                <executions>
+                    <execution>
+                        <id>default-generate</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <!--FreeMarker-->
+                    <dependency>
+                        <groupId>org.freemarker</groupId>
+                        <artifactId>freemarker</artifactId>
+                        <version>2.3.22</version>
+                    </dependency>
+                    
+                    <!--AsciiDoc-->
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>1.5.8.1</version>
+                    </dependency>
+                    
+                    <!--MarkDown-->
+                    <dependency>
+                        <groupId>com.vladsch.flexmark</groupId>
+                        <artifactId>flexmark</artifactId>
+                        <version>0.40.14</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.vladsch.flexmark</groupId>
+                        <artifactId>flexmark-profile-pegdown</artifactId>
+                        <version>0.40.14</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <branch>refs/heads/master</branch>
+                    <message>site update</message>
+                    <!-- <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory> -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
+                    </execution>
+                </executions>
+                <dependencies>
+                                       <dependency>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>github-maven-core</artifactId>
+                        <version>0.12</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-site-renderer</artifactId>
+                        <version>1.8.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>
